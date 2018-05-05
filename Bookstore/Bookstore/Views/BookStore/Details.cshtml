@@ -1,0 +1,47 @@
+﻿@model Bookstore.Models.SACH
+
+<style type="text/css">
+    #Datmua a {
+        clear: both;
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        /*float: right;*/
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left:250px;
+    }
+
+    #Datmua a:hover {
+        background: #808080;
+        color: red;
+    }
+</style>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT SÁCH</h2>
+@*<h3>Tên sách : @Model.Tensach</h3>*@
+<div>
+    <div style="width:40px;float:left;border:#808080;border-color:azure">
+        <img src="~/HinhSanPham/@Model.Hinhminhhoa" width ="200" />
+    </div>        
+    <div style="width:500px;float: left;padding-left:20px;text-align:left">
+        <p style="margin-left:150px;font-weight:bold"> Tên sách : <span style="color:red;font-size:16px">@Model.Tensach</span></p>
+        <p style="margin-left:150px;text-align:justify;font-weight:bold">Mô tả :<span style="font-weight:bold;color:red"> @Html.DisplayFor(model => model.Mota)</span>  </p>
+        <p style="margin-left:150px;font-weight:bold">Gía bán: <span style="color:red;font-size:16px">@Model.Dongia VND</span></p>
+    </div>
+        
+    <div id="Datmua">
+         <a href="@Url.Action("Themgiohang","Giohang",new { @iMasach = Model.Masach,@strURl = Request.Url.ToString()})">
+             ĐẶT MUA
+         </a>
+    </div>
+</div>
+

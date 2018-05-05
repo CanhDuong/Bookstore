@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script> tinymce.init({ selector: 'textarea' });</script>
+</head>
+<body>
+    <h3 style="color : coral ; text-align : center;background:black"> Hoàng Võ Cảnh Dương - 15DH110094 - ca 3</h3>
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul @*style="color : #ffffff"*@>
+                <li> @Html.ActionLink("TRANG CHỦ", "Index", "Bookstore") </li>
+                <li> @Html.ActionLink("QUẢN LÝ CHỦ ĐỀ", "Sanpham", "Admin") </li>
+                <li> @Html.ActionLink("NHÀ XUẤT BẢN", "Nhaxuatban", "Admin") </li>
+                <li> @Html.ActionLink("QUẢN LÝ SÁCH", "Sach", "Admin")</li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div>
+            @*<div id="wrapper">
+                <div id="header-wrapper">
+                    <div id="header">
+                        <div id="logo">
+                            <h1><a href="">BOOKSTORE YANG YANG</a></h1>
+                            <P style="color: coral"> Desgined by YY </P>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+            @*<div id="templatemo_content">
+                <div class="col-md-3">
+                    @Html.Action("Chude", "Bookstore")
+                    @Html.Action("Nhaxuatban", "Bookstore")               
+                </div>
+            </div>*@
+            <div>
+                @RenderBody()
+            </div>
+            <div class="cleaner_with_height">&nbsp;</div>
+
+            @*<img src="~/images/templatemo_ads.jpg"/>*@
+
+            <div class="cleaner_with_height">&nbsp;</div>
+
+            <div>
+                <img src="~/images/templatemo_footer_bg.jpg">
+            </div>
+        </div>
+    </div>
+    <div id="templatemo_footer">
+        <a href="subpage.html">Home</a> | <a href="subpage.html">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>Your Company Name</strong></a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent" title="free css templates">Free CSS Templates</a>
+    </div>
+    <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>                    
+</body>
+</html>

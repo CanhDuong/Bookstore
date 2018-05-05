@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Bookstore.Models.NHAXUATBAN>
+<p class="lead"> NHÀ XUẤT BẢN </p>
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("SPTheoNXB","Bookstore",new { id =item.MaNXB})" class="list-group-item">
+                @item.TenNXB
+            </a>
+        </li>
+    }
+</div>
+
+
